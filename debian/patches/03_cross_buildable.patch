@@ -1,0 +1,15 @@
+Description: Make epstool cross buildable by not hardcoding gcc as linker
+Author: Helmut Grohne <helmut@subdivi.de>
+--- a/src/unixcom.mak
++++ b/src/unixcom.mak
+@@ -22,8 +22,8 @@
+ CCAUX=gcc
+ CC=gcc
+ LFLAGS=$(PLINK) $(LIBPNGLIBS) $(GTKLIBS)
+-CLINK=gcc $(LDFLAGS)
+-LINK=gcc $(LDFLAGS)
++CLINK=$(CC) $(LDFLAGS)
++LINK=$(CC) $(LDFLAGS)
+ 
+ 
+ COMP=$(CC) -I$(SRCDIR) -I$(OBJDIR) $(CFLAGS) $(GSCFLAGS)

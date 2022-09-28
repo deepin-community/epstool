@@ -1,0 +1,27 @@
+Cygwin Release: 3.09-1
+Cygwin package maintainer: Unknown
+email: Unknown
+
+To create the binary and source distributions from packaged source:
+====
+tar -xjf epstool-3.09-1-src.tar.bz2
+cd epstool-3.09-1
+make cygwin
+====
+Source archive, binary archive and setup.hint will now appear in ./dist
+
+To create the binary and source distributions from upstream source:
+====
+tar -xzf epstool-3.09.tar.gz
+cd epstool-3.09
+make cygwin
+====
+Source archive, binary archive and setup.hint will now appear in ./dist
+
+To recreate the upstream source distribution from packaged source:
+=====
+tar -xjf epstool-3.09-1-src.tar.bz2
+cd epstool-3.09-1
+make epstar
+======
+

@@ -1,0 +1,25 @@
+Source: epstool
+Section: graphics
+Priority: optional
+Maintainer: Philip Rinn <rinni@inventati.org>
+Build-Depends:
+ debhelper-compat (= 13),
+Standards-Version: 4.5.1
+Rules-Requires-Root: no
+Homepage: http://www.ghostgum.com.au/software/epstool.htm
+Vcs-Git: https://salsa.debian.org/debian/epstool.git
+Vcs-Browser: https://salsa.debian.org/debian/epstool
+
+Package: epstool
+Architecture: any
+Multi-Arch: foreign
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+ ghostscript,
+Description: edit preview images and fix bounding boxes in EPS files
+ Encapsulated PostScript (EPS) files may contain a preview to be used
+ by programs that can't interpret the PostScript code. epstool can
+ create and extract such previews.
+ .
+ epstool can also calculate an optimal bounding box for an EPS file.

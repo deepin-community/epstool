@@ -1,0 +1,4 @@
+version=4
+opts=uversionmangle=s/\.(tar.*|tgz|zip|gz|bz2)$//i,dversionmangle=s/[-.+~]?(cvs|svn|git|snapshot|pre|hg|repack)(.*)$//i,pasv \
+http://www.ghostgum.com.au/software/epstool.htm (?:.*/)?epstool-?_?([\d+\.]+|\d+)\.(tar.*|tgz|zip|gz|bz2|) debian uupdate
+

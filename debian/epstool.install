@@ -1,0 +1,3 @@
+bin/epstool usr/bin
+doc/*.htm usr/share/doc/epstool/html
+doc/*.css usr/share/doc/epstool/html

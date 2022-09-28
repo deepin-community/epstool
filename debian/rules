@@ -1,0 +1,15 @@
+#!/usr/bin/make -f
+
+## Enable compiler hardening flags.
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+dpkg_buildflags = DEB_BUILD_MAINT_OPTIONS=$(DEB_BUILD_MAINT_OPTIONS) dpkg-buildflags
+export DEB_CFLAGS_MAINT_APPEND = $(shell $(dpkg_buildflags) --get CPPFLAGS)
+
+%:
+	dh $@ --no-parallel
+
+override_dh_auto_install:
+
+override_dh_clean:
+	dh_clean
+	rm -rf bin

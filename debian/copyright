@@ -1,0 +1,21 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: epstool
+Upstream-Contact: Russell Lang <gsview@ghostgum.com.au>
+Source: http://www.ghostgum.com.au/software/epstool.htm
+
+Files: *
+Copyright: 1993-2005, Ghostgum Software Pty Ltd.
+License: GPL-2+
+
+Files: src/errors.h
+Copyright: 1989, 1995, 1998-1999, Aladdin Enterprises.
+License: GPL-2+
+
+Files: debian/*
+Copyright: 2003-2009, Martin Pitt <mpitt@debian.org>
+           2009-2014, Philip Rinn <rinni@inventati.org>
+License: GPL-2+
+
+License: GPL-2+
+ On Debian GNU/Linux systems, the complete text of the GNU General Public
+ License version 2 can be found in `/usr/share/common-licenses/GPL-2'.

@@ -1,0 +1,22 @@
+Description: src/cplat.h: Don't define __USE_GNU
+ There were two things wrong with it:
+ - __USE_GNU is glibc-internal, the external
+   define is _GNU_SOURCE
+ - defining such macros after the first include
+   is wrong, in this case it caused FTBFS on ia64
+ .
+ An option would be to pass -D_GNU_SOURCE
+ when building, but as far as I can see the
+ define was not (anymore?) needed at all.
+Author: Adrian Bunk <bunk@debian.org>
+
+--- a/src/cplat.h
++++ b/src/cplat.h
+@@ -109,7 +109,6 @@
+ typedef struct _GdkRgbCmap GdkRgbCmap;
+ # endif
+ # include <unistd.h>
+-# define __USE_GNU	/* we might need recursive mutex */
+ # include <semaphore.h>
+ # include <pthread.h>
+ # define ZLIBNAME "libz.so"
